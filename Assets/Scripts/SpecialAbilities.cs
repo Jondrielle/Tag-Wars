@@ -13,12 +13,14 @@ public class SpecialAbilities : MonoBehaviour
     private Vector2 characterPosition;
     private float timeLimit;
     private GameObject enemy;
+    
     // Start is called before the first frame update
     void Start()
     {
         timeLimit = 10;
     }
 
+    //Create an instance of the player 
     public void CreateDoopleGanger()
     {
         characterPrefab = Instantiate(prefab, new Vector3(playerManager.player.transform.position.x + 2,
@@ -27,22 +29,15 @@ public class SpecialAbilities : MonoBehaviour
         //DestroyDoopleGanger();
     }
 
-    /*
-     * 
-     * This method destroys the doopleGanger
-     * 
-     */
+    // Method destroys doopleganger
     public void DestroyDoopleGanger()
     {
         Destroy(characterPrefab, timeLimit);
         //print("DoopleGanger was destroyed");
     }
 
-    /*
-     * 
-     * DoopleGanger pursues the enemy
-     * 
-     */
+   
+     //DoopleGanger pursues the enemy
     public void PursueEnemy()
     {
         string enemyName = EnemyToTarget();
@@ -51,11 +46,7 @@ public class SpecialAbilities : MonoBehaviour
         prefabScript.PursueEnemy(characterPosition,enemy.transform.position, targetPlayer);
     }
 
-    /*
-     * 
-     *
-     * 
-     */
+    // Determines the enemy target for doopleganger
     string EnemyToTarget()
     {
         string enemyName;
