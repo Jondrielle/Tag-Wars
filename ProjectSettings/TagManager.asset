@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Pickupable
+  - Bush
+  - Tagger
+  - Hider
+  - SpawnPoint
+  - Border
+  - Breakable
+  - cutscene
+  - doopleGanger
+  - Nonbreakable
+  - WaterTile
+  - Music
+  - VolumeSlider
+  - Feet
+  - EndMenu
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Objects
+  - Water
+  - UI
+  - Ground
+  - UI2
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Objects
+    uniqueID: 2203482463
+    locked: 0
+  - name: Player
+    uniqueID: 3151605521
+    locked: 0
