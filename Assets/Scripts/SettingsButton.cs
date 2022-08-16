@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SettingsButton : ButtonClicked
 {
+    
+    // Opens Settings
     public override void TaskOnClick()
     {
         SceneManager.LoadScene("Settings");
