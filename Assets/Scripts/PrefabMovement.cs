@@ -11,19 +11,19 @@ public class PrefabMovement : MonoBehaviour
     public PlayerMovement movement;
 
     private Vector2 distanceFromTarget;
-    // Start is called before the first frame update
-
+   
     void Awake()
     {
         movement = playerManager.GetComponent<PlayerMovement>();
     }
+    
     void Start()
     {
         dooplePosition = doopleganger.transform.position;
         movement = playerManager.GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
+    // Checks distance between doopleGanger and target
     void FixedUpdate()
     {
         bool checkCondition = Vector2.Distance(dooplePosition, targetPosition) > .1f;
@@ -55,6 +55,7 @@ public class PrefabMovement : MonoBehaviour
            
     }
 
+    // Doopleganger pursues enemy
     public void PursueEnemy(Vector2 startLocation, Vector2 destination, PlayerManager targetPlayer)
     {
         dooplePosition = startLocation;
