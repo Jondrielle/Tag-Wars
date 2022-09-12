@@ -132,7 +132,6 @@ public class GameManager : MonoBehaviour
 
         yield return StartCoroutine(ManageEndOfRound());
 
-
         yield return new WaitForSecondsRealtime(1);
     }
 
