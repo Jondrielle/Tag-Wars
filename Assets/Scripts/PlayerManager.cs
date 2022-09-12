@@ -104,24 +104,17 @@ public class PlayerManager : MonoBehaviour
      */
     private void Update()
     {
-        CheckIfCameraInMap();
-        //SelectRandomSpecialAbility();
+
         if (abilitySlider.value == abilitySlider.maxValue)
         {
-            //print("Ability Slider is: " + abilitySlider.value);
-            abilitySlider.value = 0;
-            print("Ability Slider is now: " + abilitySlider.value);
-            
+            abilitySlider.value = 0;   
             SelectRandomSpecialAbility();
         }
 
-        //Check the distance between both players 
         distanceBetweenPlayers = Vector3.Distance(this.transform.position, enemyPlayer.transform.position);
 
-        //The taggers camera zooms in on its opponent when you are in close range of them 
         if(this.gameObject.tag == "Tagger" && distanceBetweenPlayers < 16)
             playerCamera.orthographicSize = 10;
-        //resets the players camera size
         else
             ResetPlayerCameraSize();
     }
