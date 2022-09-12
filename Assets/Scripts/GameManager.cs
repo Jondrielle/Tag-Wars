@@ -367,8 +367,6 @@ public class GameManager : MonoBehaviour
     //End the entire game and zoom on winner
     public void EndEntireGame()
     {
-        //print("*********************over***********************");
-        //tagPrompt.gameObject.SetActive(false);
         foreach (PlayerManager player in players)
         {
             PlayerMovement movement = player.gameObject.GetComponent<PlayerMovement>();
@@ -377,10 +375,9 @@ public class GameManager : MonoBehaviour
             if (winner.text.Contains(player.gameObject.name))
             {
                 winnerPlayer = player;
-                //AudioListener listener = player.gameObject.GetComponent<AudioListener>();
+                
                 mainCamera.gameObject.SetActive(true);
                 mainCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -1);
-                //listener.enabled = false;
             }
         }
         virtualCam.Follow = winnerPlayer.gameObject.transform;
